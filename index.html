@@ -143,11 +143,12 @@ textarea{min-height:84px;resize:vertical;word-break:break-all}
 <script>
 /* ============ DATA: edit here ============
 CARDS: lesson, en, uk (English meaning), ex (exactly one ___), ans (word in the gap), col (2-3 collocations),
-       dict (word for Cambridge), say (optional: how to read it aloud), alt (optional: other accepted answers)
+       dict (word for Cambridge), say (optional: how to read it aloud), alt (optional: other accepted answers),
+       acc (optional: other accepted dictation answers)
 FORKS: lesson, word, ok (go with it), bad (does not), why
 SORTS: lesson, title, cats (group name -> phrases from CARDS)  */
 /*DATA START*/
-const L1="Lesson 1";
+const L1="Starter",L2="Lesson 1"; /* L1 = the first set of phrases (renamed Starter); L2 = Lesson 1 */
 const CARDS=[
 {lesson:L1,en:"aunt(y)",uk:"the sister of your mother or father",ex:"My ___ lives in Valencia and she has two sons.",ans:"aunt",col:["my aunt","visit my aunt","aunt and uncle"],dict:"aunt",say:"aunty"},
 {lesson:L1,en:"brother",uk:"a boy or man with the same parents as you",ex:"I have one older ___ and one sister.",ans:"brother",col:["older brother","younger brother","brother and sister"],dict:"brother"},
@@ -222,20 +223,81 @@ const CARDS=[
 {lesson:L1,en:"socks",uk:"soft clothes for your feet that you wear inside shoes",ex:"I wear warm ___ in winter.",ans:"socks",col:["a pair of socks","wear socks","white socks"],dict:"socks"},
 {lesson:L1,en:"towel",uk:"a soft cloth for drying your body",ex:"Take a ___ to the swimming pool.",ans:"towel",col:["a beach towel","a bath towel","dry with a towel"],dict:"towel"},
 {lesson:L1,en:"T-shirt",uk:"a light shirt with short sleeves and no buttons",ex:"It's hot, so I'm wearing a ___.",ans:"T-shirt",col:["a white T-shirt","wear a T-shirt","a plain T-shirt"],dict:"T-shirt",say:"tee shirt"},
-{lesson:L1,en:"water",uk:"the clear liquid we drink",ex:"Can I have a glass of ___, please?",ans:"water",col:["a glass of water","drink water","a bottle of water"],dict:"water"}
+{lesson:L1,en:"water",uk:"the clear liquid we drink",ex:"Can I have a glass of ___, please?",ans:"water",col:["a glass of water","drink water","a bottle of water"],dict:"water"},
+{lesson:L2,en:"attractive",uk:"nice to look at",ex:"Valencia is an ___ city with lovely beaches.",ans:"attractive",col:["attractive buildings","an attractive city","look attractive"],dict:"attractive"},
+{lesson:L2,en:"dull",uk:"boring; not interesting or exciting",ex:"The town is ___ at night. There is nothing to do.",ans:"dull",col:["a dull town","a dull day","dull and grey"],dict:"dull"},
+{lesson:L2,en:"happy",uk:"feeling pleased and cheerful",ex:"I'm very ___ in my new town.",ans:"happy",col:["a happy place","feel happy","happy and friendly"],dict:"happy"},
+{lesson:L2,en:"industrial",uk:"with a lot of factories and industry",ex:"The north of the city is very ___, with many factories.",ans:"industrial",col:["an industrial area","an industrial city","industrial estate"],dict:"industrial"},
+{lesson:L2,en:"lively",uk:"full of life, people and activity",ex:"The town is very ___ on Saturday nights.",ans:"lively",col:["a lively city","lively streets","lively at night"],dict:"lively"},
+{lesson:L2,en:"modern",uk:"new and up to date, not old",ex:"My school is a ___ building with big windows.",ans:"modern",col:["a modern city","modern buildings","modern and clean"],dict:"modern"},
+{lesson:L2,en:"quiet",uk:"with little or no noise",ex:"I like our street. It's very ___ at night.",ans:"quiet",col:["a quiet street","a quiet village","quiet and peaceful"],dict:"quiet"},
+{lesson:L2,en:"relaxed",uk:"calm; without worry or stress",ex:"The people in the village are friendly and ___.",ans:"relaxed",col:["a relaxed place","a relaxed atmosphere","feel relaxed"],dict:"relaxed"},
+{lesson:L2,en:"safe",uk:"not dangerous; free from danger",ex:"This is a ___ area, so I can walk home at night.",ans:"safe",col:["a safe place","feel safe","safe and quiet"],dict:"safe"},
+{lesson:L2,en:"traditional",uk:"typical of the old customs of a place",ex:"We ate in a ___ restaurant in the old town.",ans:"traditional",col:["a traditional town","traditional food","traditional buildings"],dict:"traditional"},
+{lesson:L2,en:"apartment block",uk:"a tall building with many flats inside",ex:"We live on the fifth floor of an apartment ___.",ans:"block",col:["a tall apartment block","live in an apartment block","a new apartment block"],dict:"apartment block"},
+{lesson:L2,en:"art gallery",uk:"a building where you can look at paintings and other art",ex:"We went to the art ___ on Saturday.",ans:"gallery",col:["visit an art gallery","a famous art gallery","an art gallery in the city"],dict:"art gallery"},
+{lesson:L2,en:"bike rack",uk:"a metal stand where you can leave your bike",ex:"There is a bike ___ outside the library.",ans:"rack",col:["a bike rack outside","leave your bike","lock your bike"],dict:"bike rack"},
+{lesson:L2,en:"bus stop",uk:"a place where a bus stops to let people get on or off",ex:"I wait at the bus ___ every morning.",ans:"stop",col:["wait at the bus stop","the next bus stop","a bus stop near school"],dict:"bus stop"},
+{lesson:L2,en:"crossing",uk:"a place where you can safely cross a road",ex:"Use the ___ to cross the road.",ans:"crossing",col:["a pedestrian crossing","a zebra crossing","at the crossing"],dict:"crossing"},
+{lesson:L2,en:"department store",uk:"a big shop with many different kinds of things",ex:"We bought a coat in the ___ store.",ans:"department",col:["a big department store","shop in a department store","a department store sale"],dict:"department store"},
+{lesson:L2,en:"pavement",uk:"the path at the side of a road (British English)",ex:"Walk on the ___, not on the road.",ans:"pavement",col:["walk on the pavement","a wide pavement","on the pavement"],dict:"pavement"},
+{lesson:L2,en:"rubbish bin",uk:"a container in the street for things you do not want",ex:"The street is clean because there is a rubbish ___ on every corner.",ans:"bin",col:["put it in the rubbish bin","empty the rubbish bin","a full rubbish bin"],dict:"rubbish bin"},
+{lesson:L2,en:"seat",uk:"a place to sit, for example on a bus",ex:"Is this ___ free?",ans:"seat",col:["take a seat","a free seat","a seat on the bus"],dict:"seat"},
+{lesson:L2,en:"skate park",uk:"a place where people ride skateboards",ex:"My friends meet at the skate ___ after school.",ans:"park",col:["go to the skate park","a new skate park","a skate park near my house"],dict:"skate park"},
+{lesson:L2,en:"sports centre",uk:"a building where you can play sports",ex:"The ___ centre has a gym and a football pitch.",ans:"sports",col:["go to the sports centre","a local sports centre","sports centre and swimming pool"],dict:"sports centre"},
+{lesson:L2,en:"swimming pool",uk:"a place with water where you can swim",ex:"I go to the ___ pool twice a week.",ans:"swimming",col:["an indoor swimming pool","a public swimming pool","go to the swimming pool"],dict:"swimming pool"},
+{lesson:L2,en:"by the sea/water",uk:"next to the sea or a lake",ex:"I love living by the ___.",ans:"sea",alt:["water"],col:["a house by the sea","walk by the water","live by the sea"],dict:"sea",say:"by the sea, or by the water"},
+{lesson:L2,en:"in an area/a region called",uk:"in a place that has a name, for example Andalusia",ex:"My grandparents live in a ___ called Andalusia.",ans:"region",alt:["area"],col:["in a region called","in an area called","a region of Spain"],dict:"region",say:"in an area, or in a region called",acc:["in an area called","in a region called","in an area or a region called"]},
+{lesson:L2,en:"in the capital",uk:"in the main city of a country",ex:"Spain's government is in the ___, Madrid.",ans:"capital",col:["live in the capital","work in the capital","in the capital city"],dict:"capital"},
+{lesson:L2,en:"in the centre of",uk:"in the middle part of a town or a place",ex:"There is a big square in the ___ of the town.",ans:"centre",col:["in the centre of the city","in the centre of town","in the centre of the room"],dict:"centre"},
+{lesson:L2,en:"in the north/south/east/west",uk:"in one of the four main directions",ex:"Valencia is in the ___ of Spain.",ans:"east",col:["in the north of Spain","in the south of England","in the west"],dict:"north",say:"in the north, south, east or west",acc:["in the north","in the south","in the east","in the west"]},
+{lesson:L2,en:"near the border with",uk:"close to the line between two countries",ex:"Our town is near the ___ with France.",ans:"border",col:["near the border","cross the border","the border with Portugal"],dict:"border"},
+{lesson:L2,en:"near the capital",uk:"not far from the main city of a country",ex:"We live in a small village near the ___.",ans:"capital",col:["a village near the capital","live near the capital","a town near the capital"],dict:"capital"},
+{lesson:L2,en:"near the mountains",uk:"not far from very high hills",ex:"We have a small cabin near the ___.",ans:"mountains",col:["a house near the mountains","a village near the mountains","live near the mountains"],dict:"mountain"},
+{lesson:L2,en:"on the coast",uk:"at the place where the land meets the sea",ex:"We spent our holiday on the ___.",ans:"coast",col:["a town on the coast","on the east coast","a holiday on the coast"],dict:"coast"},
+{lesson:L2,en:"at the back",uk:"in the part that is furthest from the front",ex:"In the photo, my brother is at the ___.",ans:"back",col:["at the back of the class","at the back of the photo","sit at the back"],dict:"back"},
+{lesson:L2,en:"at the front",uk:"in the part that is nearest to you",ex:"The teacher is standing at the ___ of the class.",ans:"front",col:["at the front of the class","at the front of the photo","sit at the front"],dict:"front"},
+{lesson:L2,en:"on the left",uk:"on the side of your left hand",ex:"Turn left here. The bank is on the ___.",ans:"left",col:["on the left of the photo","on your left","left and right"],dict:"left"},
+{lesson:L2,en:"on the right",uk:"on the side of your right hand",ex:"Turn right here. The bank is on the ___.",ans:"right",col:["on the right of the photo","on your right","right and left"],dict:"right"},
+{lesson:L2,en:"community",uk:"all the people who live in one area",ex:"Our local ___ organises a party every year.",ans:"community",col:["a local community","a community centre","a sense of community"],dict:"community"},
+{lesson:L2,en:"freeze",uk:"to become very cold and turn into ice",ex:"In winter the lake can ___.",ans:"freeze",col:["freeze in winter","the water freezes","freeze food"],dict:"freeze"},
+{lesson:L2,en:"hang out",uk:"to spend time with friends, relaxing (informal)",ex:"We often ___ out at the park after school.",ans:"hang",col:["hang out with friends","hang out at the park","a place to hang out"],dict:"hang out"},
+{lesson:L2,en:"lift",uk:"a machine that carries people up and down in a building (British English)",ex:"Our flat is on the tenth floor, so we take the ___.",ans:"lift",col:["take the lift","in the lift","the lift is broken"],dict:"lift"},
+{lesson:L2,en:"pressure",uk:"a worried feeling when you have to do something important",ex:"I feel a lot of ___ before exams.",ans:"pressure",col:["under pressure","a lot of pressure","feel pressure"],dict:"pressure"},
+{lesson:L2,en:"be the best at something",uk:"to do something better than everyone else",ex:"My sister wants to be the ___ at tennis.",ans:"best",col:["be the best at English","the best at sport","try to be the best"],dict:"best"},
+{lesson:L2,en:"concrete",uk:"a hard grey material used to build houses and roads",ex:"The new bridge is made of ___.",ans:"concrete",col:["a concrete building","concrete and glass","a concrete wall"],dict:"concrete"},
+{lesson:L2,en:"cycle path",uk:"a road or path only for bikes",ex:"I go to school on the ___ path by the river.",ans:"cycle",col:["ride on a cycle path","a new cycle path","a cycle path along the river"],dict:"cycle path"},
+{lesson:L2,en:"design",uk:"the way something is planned and made",ex:"I like the ___ of this building.",ans:"design",col:["a modern design","the design of a building","a new design"],dict:"design"},
+{lesson:L2,en:"give up",uk:"to stop trying to do something",ex:"Don't ___ up! You can do it.",ans:"give",col:["never give up","give up easily","give up football"],dict:"give up"},
+{lesson:L2,en:"grow up",uk:"to change from a child to an adult",ex:"I want to be a doctor when I ___ up.",ans:"grow",col:["when I grow up","grow up in a small town","grow up fast"],dict:"grow up"},
+{lesson:L2,en:"library",uk:"a place where you can borrow books",ex:"I borrow books from the ___ every week.",ans:"library",col:["a public library","a school library","go to the library"],dict:"library"},
+{lesson:L2,en:"made of wood",uk:"made from trees, not from metal or plastic",ex:"This table is made of ___.",ans:"wood",col:["made of metal","made of glass","made of plastic"],dict:"wood"},
+{lesson:L2,en:"meet up",uk:"to meet someone, usually after making a plan",ex:"Let's ___ up at the cinema at six.",ans:"meet",col:["meet up with friends","meet up after school","let's meet up"],dict:"meet up"},
+{lesson:L2,en:"park",uk:"a large green place in a town with grass and trees",ex:"We play football in the ___ on Sundays.",ans:"park",col:["go to the park","walk in the park","a city park"],dict:"park"},
+{lesson:L2,en:"pass the time",uk:"to do something while you wait or have nothing else to do",ex:"I read a book to ___ the time on the train.",ans:"pass",col:["to pass the time","pass the time reading","pass the time with games"],dict:"pass the time"},
+{lesson:L2,en:"shape",uk:"the form of something, for example a circle or a square",ex:"The building has an unusual ___.",ans:"shape",col:["a round shape","a square shape","in the shape of a star"],dict:"shape"}
 ];
 const FORKS=[
 {lesson:L1,word:"put",ok:["the light on","your hand up","your bag on the chair"],bad:["a language"],why:"We put the light on, put a hand up and put a bag on a chair. We speak a language, but we don't put one."},
 {lesson:L1,word:"wear",ok:["jeans","a cap","a belt","socks"],bad:["a bookcase"],why:"We wear clothes: jeans, a cap, a belt, socks. We don't wear furniture."},
 {lesson:L1,word:"open",ok:["the window","your book","your bag"],bad:["the wall"],why:"We open things that have an inside or a way in: a window, a book, a bag. A wall doesn't open."},
-{lesson:L1,word:"write",ok:["your signature","your date of birth","your postcode"],bad:["your cushion"],why:"We write information about ourselves: a signature, a date of birth, a postcode. We don't write a cushion."}
+{lesson:L1,word:"write",ok:["your signature","your date of birth","your postcode"],bad:["your cushion"],why:"We write information about ourselves: a signature, a date of birth, a postcode. We don't write a cushion."},
+{lesson:L2,word:"take",ok:["the lift","a seat","the bus"],bad:["the pavement"],why:"We take the lift, take a seat and take the bus. We walk on the pavement, but we don't take it."},
+{lesson:L2,word:"feel",ok:["safe","relaxed","happy"],bad:["industrial"],why:"We feel safe, relaxed or happy. Industrial describes a place with factories, not a feeling."},
+{lesson:L2,word:"made of",ok:["wood","concrete","glass"],bad:["pressure"],why:"Things are made of materials: wood, concrete, glass. Pressure is a feeling, not a material."},
+{lesson:L2,word:"in the",ok:["capital","centre of the city","north of the country"],bad:["coast"],why:"We say in the capital, in the centre and in the north, but on the coast."}
 ];
 const SORTS=[
 {lesson:L1,title:"Sort the phrases into four groups",cats:{
  "Family":["aunt(y)","cousin","grandparents","uncle"],
  "In the classroom":["bookcase","cupboard","noticeboard","clock"],
  "Personal details":["nationality","postcode","surname","date of birth"],
- "Clothes":["belt","jeans","socks","T-shirt"]}}
+ "Clothes":["belt","jeans","socks","T-shirt"]}},
+{lesson:L2,title:"Sort the phrases into four groups",cats:{
+ "Describing places":["attractive","dull","lively","quiet"],
+ "Around town":["bus stop","pavement","skate park","department store"],
+ "Where things are":["on the left","at the back","on the coast","near the mountains"],
+ "Things we do":["hang out","meet up","give up","grow up"]}}
 ];
 /*DATA END*/
 
@@ -484,7 +546,7 @@ function xAct(a,el){
       const c=X.q[X.i],v=norm(xInput());X.val=xInput();
       let good;
       if(X.type==="gap")good=[c.ans,...(c.alt||[])].map(norm).includes(v);
-      else good=variants(c.en).includes(v)||(c.say&&norm(c.say)===v);
+      else good=variants(c.en).includes(v)||(c.say&&norm(c.say)===v)||(c.acc||[]).map(norm).includes(v);
       if(!v)return;
       X.fb=good?"ok":"no";if(good)X.sc++;else X.wrong.push(c.en);break;}
     case"x-next":X.i++;X.fb=null;X.val="";X.hint=false;X.pick=null;X.sel=[];X.checked=false;break;
