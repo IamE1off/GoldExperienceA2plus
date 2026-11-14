@@ -148,7 +148,7 @@ CARDS: lesson, en, uk (English meaning), ex (exactly one ___), ans (word in the 
 FORKS: lesson, word, ok (go with it), bad (does not), why
 SORTS: lesson, title, cats (group name -> phrases from CARDS)  */
 /*DATA START*/
-const L1="Starter",L2="Lesson 1"; /* L1 = the first set of phrases (renamed Starter); L2 = Lesson 1 */
+const L1="Starter",L2="Lesson 1",L3="Lesson 2"; /* L1 = the first set of phrases (renamed Starter); L2 = Lesson 1; L3 = Lesson 2 */
 const CARDS=[
 {lesson:L1,en:"aunt(y)",uk:"the sister of your mother or father",ex:"My ___ lives in Valencia and she has two sons.",ans:"aunt",col:["my aunt","visit my aunt","aunt and uncle"],dict:"aunt",say:"aunty"},
 {lesson:L1,en:"brother",uk:"a boy or man with the same parents as you",ex:"I have one older ___ and one sister.",ans:"brother",col:["older brother","younger brother","brother and sister"],dict:"brother"},
@@ -275,7 +275,54 @@ const CARDS=[
 {lesson:L2,en:"meet up",uk:"to meet someone, usually after making a plan",ex:"Let's ___ up at the cinema at six.",ans:"meet",col:["meet up with friends","meet up after school","let's meet up"],dict:"meet up"},
 {lesson:L2,en:"park",uk:"a large green place in a town with grass and trees",ex:"We play football in the ___ on Sundays.",ans:"park",col:["go to the park","walk in the park","a city park"],dict:"park"},
 {lesson:L2,en:"pass the time",uk:"to do something while you wait or have nothing else to do",ex:"I read a book to ___ the time on the train.",ans:"pass",col:["to pass the time","pass the time reading","pass the time with games"],dict:"pass the time"},
-{lesson:L2,en:"shape",uk:"the form of something, for example a circle or a square",ex:"The building has an unusual ___.",ans:"shape",col:["a round shape","a square shape","in the shape of a star"],dict:"shape"}
+{lesson:L2,en:"shape",uk:"the form of something, for example a circle or a square",ex:"The building has an unusual ___.",ans:"shape",col:["a round shape","a square shape","in the shape of a star"],dict:"shape"},
+{lesson:L3,en:"acting",uk:"performing in plays or films",ex:"I love ___. I want to be in the school play.",ans:"acting",col:["acting classes","acting in a play","acting and singing"],dict:"acting"},
+{lesson:L3,en:"art",uk:"making pictures, for example by painting or drawing",ex:"We have an ___ lesson on Fridays.",ans:"art",col:["an art lesson","an art club","modern art"],dict:"art"},
+{lesson:L3,en:"cooking",uk:"making food",ex:"My dad loves ___. He makes great pasta.",ans:"cooking",col:["a cooking class","cooking dinner","a cooking show"],dict:"cooking"},
+{lesson:L3,en:"cycling",uk:"riding a bike",ex:"___ is a good way to get to school.",ans:"Cycling",col:["go cycling","a cycling club","cycling to school"],dict:"cycling"},
+{lesson:L3,en:"dancing",uk:"moving your body to music",ex:"We went ___ at the party last night.",ans:"dancing",col:["go dancing","a dancing class","dancing to music"],dict:"dancing"},
+{lesson:L3,en:"drawing",uk:"making pictures with a pencil or pen",ex:"He is good at ___. His pictures are lovely.",ans:"drawing",col:["a drawing of a house","a drawing lesson","drawing with a pencil"],dict:"drawing"},
+{lesson:L3,en:"gaming",uk:"playing video games",ex:"My brother spends hours ___ on his computer.",ans:"gaming",col:["online gaming","a gaming computer","love gaming"],dict:"gaming"},
+{lesson:L3,en:"languages",uk:"systems of words for speaking, for example English or French",ex:"I'm interested in ___. I study English and French.",ans:"languages",col:["learn languages","foreign languages","speak three languages"],dict:"languages"},
+{lesson:L3,en:"making films",uk:"creating videos or movies",ex:"My hobby is making ___ with my phone.",ans:"films",col:["make a short film","making films with friends","a film club"],dict:"film"},
+{lesson:L3,en:"playing the guitar",uk:"making music with a guitar",ex:"I enjoy playing the ___ in my free time.",ans:"guitar",col:["play the guitar","an electric guitar","guitar lessons"],dict:"guitar"},
+{lesson:L3,en:"puzzles",uk:"games where you think hard to find an answer, for example jigsaws",ex:"My grandma loves doing ___ on Sundays.",ans:"puzzles",col:["do a puzzle","a jigsaw puzzle","solve a puzzle"],dict:"puzzle"},
+{lesson:L3,en:"singing",uk:"making music with your voice",ex:"___ in the shower makes me happy.",ans:"Singing",col:["singing lessons","a singing competition","singing and dancing"],dict:"singing"},
+{lesson:L3,en:"team sports",uk:"sports played by two groups of players, for example football",ex:"Football and basketball are ___ sports.",ans:"team",col:["play team sports","a team sport","team sports at school"],dict:"team sport"},
+{lesson:L3,en:"writing",uk:"putting words on paper or a screen, for example stories",ex:"She is good at ___ stories.",ans:"writing",col:["creative writing","writing a story","reading and writing"],dict:"writing"},
+{lesson:L3,en:"do well",uk:"to be successful; to get good results",ex:"I studied hard, so I hope to ___ well in the test.",ans:"do",col:["do well at school","do well in an exam","do really well"],dict:"do well"},
+{lesson:L3,en:"get better",uk:"to improve",ex:"My English is ___ better every week.",ans:"getting",col:["get better at English","slowly get better","get better with practice"],dict:"get better"},
+{lesson:L3,en:"get good results",uk:"to have high marks in tests or exams",ex:"If you study every day, you will ___ good results.",ans:"get",col:["get good results in exams","get good results at school","hope to get good results"],dict:"result"},
+{lesson:L3,en:"get it right",uk:"to do something correctly",ex:"It's difficult, but I want to ___ it right.",ans:"get",col:["try to get it right","get it right first time","get the answer right"],dict:"right"},
+{lesson:L3,en:"go well",uk:"to happen in a good way",ex:"My job interview ___ well, and I got the job.",ans:"went",col:["everything went well","How did it go?","hope it goes well"],dict:"go well"},
+{lesson:L3,en:"make progress",uk:"to improve step by step",ex:"You are ___ great progress in English.",ans:"making",col:["make good progress","make progress in English","make slow progress"],dict:"progress"},
+{lesson:L3,en:"spend time",uk:"to use your time doing something",ex:"I like to ___ time with my friends at weekends.",ans:"spend",col:["spend time with friends","spend time outdoors","spend time on homework"],dict:"spend time"},
+{lesson:L3,en:"take part (in)",uk:"to join an activity with other people",ex:"Many students ___ part in the school concert.",ans:"take",col:["take part in a competition","take part in a race","take part in a project"],dict:"take part",say:"take part in"},
+{lesson:L3,en:"waste time",uk:"to use time badly, doing nothing useful",ex:"Don't ___ time. We have to leave in five minutes.",ans:"waste",col:["a waste of time","waste time online","don't waste time"],dict:"waste time"},
+{lesson:L3,en:"careful",uk:"thinking about what you do, so you do not make mistakes or get hurt",ex:"Be ___ when you cross the road.",ans:"careful",col:["be careful","a careful driver","careful with money"],dict:"careful"},
+{lesson:L3,en:"clever",uk:"good at learning and understanding things quickly",ex:"She is very ___. She always knows the answer.",ans:"clever",col:["a clever student","a clever idea","clever and funny"],dict:"clever"},
+{lesson:L3,en:"confident",uk:"sure about yourself and what you can do",ex:"I feel ___ before the speaking test.",ans:"confident",col:["feel confident","a confident speaker","confident and relaxed"],dict:"confident"},
+{lesson:L3,en:"friendly",uk:"kind and nice to other people",ex:"Our new neighbours are very ___.",ans:"friendly",col:["a friendly person","friendly and kind","friendly to everyone"],dict:"friendly"},
+{lesson:L3,en:"honest",uk:"always telling the truth",ex:"He is an ___ boy. He never tells lies.",ans:"honest",col:["an honest answer","be honest","honest and kind"],dict:"honest"},
+{lesson:L3,en:"polite",uk:"showing good manners, for example saying please and thank you",ex:"It's ___ to say please and thank you.",ans:"polite",col:["polite and friendly","a polite answer","be polite"],dict:"polite"},
+{lesson:L3,en:"serious",uk:"not funny or playful; thinking carefully about important things",ex:"My teacher is ___ in class but fun after lessons.",ans:"serious",col:["a serious face","a serious student","very serious"],dict:"serious"},
+{lesson:L3,en:"link",uk:"a connection to another page on the internet",ex:"Click on the ___ to open the page.",ans:"link",col:["click on a link","a link to a website","send a link"],dict:"link"},
+{lesson:L3,en:"press",uk:"to push a button or key with your finger",ex:"___ the green button to start.",ans:"Press",col:["press a button","press the key","press play"],dict:"press"},
+{lesson:L3,en:"program",uk:"a set of instructions that makes a computer do something",ex:"I use a ___ to write my homework.",ans:"program",col:["a computer program","a new program","run a program"],dict:"program"},
+{lesson:L3,en:"search (for)",uk:"to look carefully for something, for example on the internet",ex:"I ___ for information online before my project.",ans:"search",col:["search for information","search online","search for a word"],dict:"search",say:"search for"},
+{lesson:L3,en:"share",uk:"to give or use something together with other people",ex:"Can you ___ your pencil with me?",ans:"share",col:["share a photo","share with friends","share a room"],dict:"share"},
+{lesson:L3,en:"site",uk:"a place on the internet; a website",ex:"I found a useful ___ about English grammar.",ans:"site",col:["a useful site","visit a site","a shopping site"],dict:"site"},
+{lesson:L3,en:"animation",uk:"a film made from moving drawings or computer pictures",ex:"My favourite film is an ___ about a talking dog.",ans:"animation",col:["a short animation","computer animation","an animation film"],dict:"animation"},
+{lesson:L3,en:"card trick",uk:"a magic trick done with playing cards",ex:"My uncle can do a ___ trick. He makes the queen disappear.",ans:"card",col:["do a card trick","learn a card trick","a magic card trick"],dict:"card trick"},
+{lesson:L3,en:"choice",uk:"a decision between two or more things; the thing you choose",ex:"Pizza or pasta? It's a difficult ___.",ans:"choice",col:["make a choice","a good choice","a difficult choice"],dict:"choice"},
+{lesson:L3,en:"exercise",uk:"physical activity that keeps your body healthy; also a task for practice",ex:"I do ___ every morning to stay healthy.",ans:"exercise",col:["do exercise","regular exercise","a grammar exercise"],dict:"exercise"},
+{lesson:L3,en:"get rid of something",uk:"to throw away or remove something you do not want",ex:"We need to ___ rid of these old boxes.",ans:"get",col:["get rid of old clothes","get rid of rubbish","get rid of a bad habit"],dict:"get rid of"},
+{lesson:L3,en:"get started",uk:"to begin",ex:"Let's ___ started! Open your books.",ans:"get",col:["let's get started","get started with homework","get started quickly"],dict:"get started"},
+{lesson:L3,en:"get to the top",uk:"to reach the highest point or the best position",ex:"It took us two hours to ___ to the top of the mountain.",ans:"get",col:["get to the top of the mountain","get to the top of the class","try to get to the top"],dict:"top"},
+{lesson:L3,en:"go for a walk",uk:"to walk for pleasure or exercise",ex:"After dinner we often ___ for a walk in the park.",ans:"go",col:["go for a walk with the dog","go for a long walk","go for a walk after dinner"],dict:"go for a walk"},
+{lesson:L3,en:"go online",uk:"to connect to the internet",ex:"I usually ___ online after dinner to chat with friends.",ans:"go",col:["go online to check emails","go online with a phone","go online to study"],dict:"go online"},
+{lesson:L3,en:"make a mistake",uk:"to do something wrong",ex:"Everyone can ___ a mistake. It's OK.",ans:"make",col:["a big mistake","a spelling mistake","by mistake"],dict:"mistake"},
+{lesson:L3,en:"taekwondo",uk:"a sport from Korea with kicks and punches",ex:"My sister goes to ___ classes on Tuesdays.",ans:"taekwondo",col:["do taekwondo","taekwondo classes","a taekwondo club"],dict:"taekwondo",say:"tie kwon doh"}
 ];
 const FORKS=[
 {lesson:L1,word:"put",ok:["the light on","your hand up","your bag on the chair"],bad:["a language"],why:"We put the light on, put a hand up and put a bag on a chair. We speak a language, but we don't put one."},
@@ -285,7 +332,11 @@ const FORKS=[
 {lesson:L2,word:"take",ok:["the lift","a seat","the bus"],bad:["the pavement"],why:"We take the lift, take a seat and take the bus. We walk on the pavement, but we don't take it."},
 {lesson:L2,word:"feel",ok:["safe","relaxed","happy"],bad:["industrial"],why:"We feel safe, relaxed or happy. Industrial describes a place with factories, not a feeling."},
 {lesson:L2,word:"made of",ok:["wood","concrete","glass"],bad:["pressure"],why:"Things are made of materials: wood, concrete, glass. Pressure is a feeling, not a material."},
-{lesson:L2,word:"in the",ok:["capital","centre of the city","north of the country"],bad:["coast"],why:"We say in the capital, in the centre and in the north, but on the coast."}
+{lesson:L2,word:"in the",ok:["capital","centre of the city","north of the country"],bad:["coast"],why:"We say in the capital, in the centre and in the north, but on the coast."},
+{lesson:L3,word:"do",ok:["well at school","a puzzle","taekwondo"],bad:["a mistake"],why:"We do well at school, do a puzzle and do taekwondo. We make a mistake; we don't do one."},
+{lesson:L3,word:"make",ok:["a mistake","progress","a choice"],bad:["exercise"],why:"We make a mistake, make progress and make a choice. We do exercise; we don't make it."},
+{lesson:L3,word:"go",ok:["for a walk","online","well"],bad:["a program"],why:"We go for a walk, go online, and a test or interview can go well. We use a program, but we don't go one."},
+{lesson:L3,word:"get",ok:["better","started","good results"],bad:["a walk"],why:"We get better, get started and get good results. We go for a walk; we don't get one."}
 ];
 const SORTS=[
 {lesson:L1,title:"Sort the phrases into four groups",cats:{
@@ -297,7 +348,12 @@ const SORTS=[
  "Describing places":["attractive","dull","lively","quiet"],
  "Around town":["bus stop","pavement","skate park","department store"],
  "Where things are":["on the left","at the back","on the coast","near the mountains"],
- "Things we do":["hang out","meet up","give up","grow up"]}}
+ "Things we do":["hang out","meet up","give up","grow up"]}},
+{lesson:L3,title:"Sort the phrases into four groups",cats:{
+ "Hobbies and activities":["acting","cooking","drawing","taekwondo"],
+ "Personality adjectives":["careful","honest","polite","friendly"],
+ "On the internet":["link","site","go online","search (for)"],
+ "Practising and improving":["do well","get better","make progress","get good results"]}}
 ];
 /*DATA END*/
 
